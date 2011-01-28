@@ -18,7 +18,7 @@ Jeweler::Tasks.new do |gem|
   gem.summary = %Q{one-line summary of your gem}
   gem.description = %Q{longer description of your gem}
   gem.email = "bernardo.silva@gmail.com"
-  gem.authors = ["Bernardo S. A. Silva"]
+  gem.authors = ["Bernardo Silva"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
   # gem.add_runtime_dependency 'actionpack', '>= 3.0.3'
