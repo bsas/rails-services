@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "lib/rails-services.rb",
+    "rails-services.gemspec",
     "test/helper.rb",
     "test/test_rails-services.rb"
   ]
