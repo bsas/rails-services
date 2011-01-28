@@ -1,6 +1,50 @@
 = rails-services
 
-Description goes here.
+Services Description for Rails 3.0.3+ or 2.3.8+.
+
+== Installing and Testing in Rails 3.0.3+
+
+=== First, add the 'rails-services' gem to your Gemfile:
+
+Gemfile:
+  # RailsServices
+  gem 'rails-services'
+
+=== Second, add the routes for your services info and your models info:
+
+config/routes.rb:
+  # RailsServices (Rails 3)
+  match '/info(.:format)' => 'rails_services#info_services'
+  match '/info/:resource(.:format)' => 'rails_services#info_resource'
+
+=== Then, you can see the JSON results at the routes:
+
+  Services list: http://<server>:<port>/info.json
+  Model detail: http://<server>:<port>/info/<model>.json
+
+== Installing and Testing in Rails 2.3.8+
+
+=== First, install the 'rails-services' gem:
+
+  gem install rails-services
+
+=== Second, add the 'rails-services' gem to you environment.rb:
+
+config/environment.rb:
+  # RailsServices
+  config.gem "rails-services"
+
+=== Third, add the routes for your services info and your models info:
+
+config/routes.rb:
+  # RailsServices (Rails 2)
+  map.connect 'info.:format', :controller => "rails_services", :action => "info_services"
+  map.connect 'info/:resource.:format', :controller => "rails_services", :action => "info_resource"
+
+=== Then, you can see the JSON results at the routes:
+
+  Services list: http://<server>:<port>/info.json
+  Model detail: http://<server>:<port>/info/<model>.json
 
 == Contributing to rails-services
  
@@ -14,6 +58,6 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2011 Bernardo S. A. Silva. See LICENSE.txt for
+Copyright (c) 2011 Bernardo Silva. See LICENSE.txt for
 further details.
 
