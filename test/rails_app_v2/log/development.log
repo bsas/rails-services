@@ -1,0 +1,64 @@
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2011-01-28 15:29:30) [GET]
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing RailsServicesController#info_services to json (for 0:0:0:0:0:0:0:1 at 2011-01-28 15:44:05) [GET]
+Completed in 37ms (View: 4, DB: 0) | 200 OK [http://localhost/info.json]
+
+
+Processing Rails::InfoController#properties (for 0:0:0:0:0:0:0:1 at 2011-01-28 15:44:18) [GET]
+Completed in 64ms (View: 9, DB: 0) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing RailsServicesController#info_services to json (for 0:0:0:0:0:0:0:1 at 2011-01-28 15:49:29) [GET]
+Completed in 37ms (View: 6, DB: 0) | 200 OK [http://localhost/info.json]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (201.0ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT name, sql FROM sqlite_master WHERE tbl_name = "schema_migrations" AND type = 'index'[0m
+  [4;35;1mSQL (141.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAuthors (20110128215001)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "authors" ("id" integer primary key autoincrement not null, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT last_insert_rowid()[0m
+Migrating to CreatePosts (20110128215003)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "posts" ("id" integer primary key autoincrement not null, "author_id" integer, "text" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT last_insert_rowid()[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT name, sql FROM sqlite_master WHERE tbl_name = "authors" AND type = 'index'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT name, sql FROM sqlite_master WHERE tbl_name = "posts" AND type = 'index'[0m
+
+
+Processing RailsServicesController#info_services to json (for 0:0:0:0:0:0:0:1 at 2011-01-28 15:52:38) [GET]
+Completed in 112ms (View: 27, DB: 0) | 200 OK [http://localhost/info.json]
+
+
+Processing RailsServicesController#info_resource to json (for 0:0:0:0:0:0:0:1 at 2011-01-28 15:52:44) [GET]
+  Parameters: {"resource"=>"post"}
+Completed in 44ms (View: 8, DB: 0) | 200 OK [http://localhost/info/post.json]
+
+
+Processing RailsServicesController#info_resource to json (for 0:0:0:0:0:0:0:1 at 2011-01-28 15:52:52) [GET]
+  Parameters: {"resource"=>"author"}
+Completed in 24ms (View: 7, DB: 0) | 200 OK [http://localhost/info/author.json]
+
+
+Processing RailsServicesController#info_resource to json (for 0:0:0:0:0:0:0:1 at 2011-01-28 15:52:56) [GET]
+  Parameters: {"resource"=>"post"}
+Completed in 32ms (View: 7, DB: 0) | 200 OK [http://localhost/info/post.json]
