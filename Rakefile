@@ -15,8 +15,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "rails-services"
   gem.homepage = "http://github.com/bsas/rails-services"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{one-line summary of your gem}
+  gem.description = %Q{longer description of your gem}
   gem.email = "bernardo.silva@gmail.com"
   gem.authors = ["Bernardo S. A. Silva"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
