@@ -5,12 +5,12 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rails-services}
-  s.version = "0.1.4"
+  s.version = "0.1.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Bernardo Silva"]
   s.date = %q{2011-01-28}
-  s.description = %q{longer description of your gem}
+  s.description = %q{Services Description for Rails 3.0.3+ or 2.3.8+}
   s.email = %q{bernardo.silva@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -182,7 +182,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
-  s.summary = %q{one-line summary of your gem}
+  s.summary = %q{Services Description for Rails 3.0.3+ or 2.3.8+}
   s.test_files = [
     "test/helper.rb",
     "test/rails_app_v2/app/controllers/application_controller.rb",
